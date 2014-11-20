@@ -14,7 +14,13 @@ public class ColorRgb implements Color
 	@Override
 	public ColorCymk toCymk()
 	{
-		/* Implement this */
+		double R = (double) r/255;
+		double G = (double) g/255;
+		double B = (double) b/255;
+		double K = 1 - Util.varMax(R, G, B);
+		double C = (1 - R - K) / (1 - K);
+		double Y = (1 - B - K) / (1 - K);
+		double M = (1 - G - K) / (1 - K);
 
 		/*
 		 * Hint: when dividing two integers, you need to cast the
@@ -25,19 +31,21 @@ public class ColorRgb implements Color
 		 * Hint: use Util.varMax() where max() is used in the formula
 		 */
 
-		return new ColorCymk(0, 0, 0, 0);
+		return new ColorCymk(C, Y, M, K);
 	}
 
 	@Override
 	public ColorHex toHex() throws ColorException
 	{
-		/* Implement this */
+		String result = Integer.toHexString(r) + 
+				Integer.toHexString(g) +
+				Integer.toHexString(b);
 
 		/*
 		 * Hint: Integer.toHexString()
 		 */
 
-		return new ColorHex("000000");
+		return new ColorHex(result);
 	}
 
 	@Override
@@ -45,7 +53,7 @@ public class ColorRgb implements Color
 	{
 		/* Implement this */
 
-		return new ColorRgb(0, 0, 0);
+		return new ColorRgb(r, g, b);
 	}
 
 	@Override

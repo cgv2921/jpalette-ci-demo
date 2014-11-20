@@ -18,7 +18,7 @@ public class ColorHex implements Color
 		 * can catch and then re-throw as a ColorException.
 		 */
 
-		this.hex = "";
+		this.hex = hex;
 	}
 
 	@Override

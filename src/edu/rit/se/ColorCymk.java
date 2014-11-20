@@ -12,12 +12,10 @@ public class ColorCymk implements Color
 	 */
 	public ColorCymk(double c, double y, double m, double k)
 	{
-		/* Implement this */
-
-		this.c = 0;
-		this.y = 0;
-		this.m = 0;
-		this.k = 0;
+		this.c = c;
+		this.y = y;
+		this.m = m;
+		this.k = k;
 	}
 
 	@Override

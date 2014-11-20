@@ -41,7 +41,6 @@ public class JPalette
 		System.out.println("Ex: a (c:.50,y:.50,m:.50,k:.50)");
 		System.out.println("Ex: a 0xFEFEFE");
 		System.out.println();
-		System.out.println("nothing."); //delete me
 
 		BufferedReader r;
 		r = new BufferedReader(new InputStreamReader(System.in));
